@@ -1,0 +1,80 @@
+:root {
+    --pinkish: #c201ff;
+    --purple: #9a2bfb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kiwi Maru", serif;
+}
+
+body {
+    height: 100vh;
+    margin-top: 10%;
+    background: var(--purple);
+    background: linear-gradient(to left, var(--pinkish), var(--purple));
+    background-repeat: no-repeat;
+}
+
+.checker {
+    margin: 1rem auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+}
+
+.checker > h1 {
+    margin: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.strength {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    margin: 1rem;
+    height: 3rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.strength::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: inherit;
+    width: calc(1% * var(--strength, 0));
+    background-color: rgba(137, 43, 226, 0.555);
+    transition: width 0.3s;
+}
+
+.password {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.password:focus {
+    outline-color: rgba(255, 255, 255, 0.5);
+}
+
+.reasons {
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.25);
+}
